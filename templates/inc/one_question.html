@@ -1,5 +1,5 @@
 {% load static %}
-    <link href="{% static "css/one_question.css" %}" rel="stylesheet">
+<link href="{% static "css/one_question.css" %}" rel="stylesheet">
 <div class="question-block block-body">
     <div class="row">
         <div class="col-2">
@@ -31,7 +31,7 @@
                     <a href={% url 'question' question.id %}>
                         Answers
                         <span class="answer-count">
-                            ({{ answers_count }})
+                            ({{ question.answer_set.all|length }})
                         </span>
                     </a>
                     Tags:
