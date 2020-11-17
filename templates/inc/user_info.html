@@ -1,22 +1,22 @@
 {% load static %}
 
-    <link href="{% static "css/user_info.css" %}" rel="stylesheet">
-        <span class="user-block">
-            <table class="logged-user">
-                <tr>
-                    <td rowspan=2><img src={% static "/img/user_avatar.png" alt="user-avatar" %} class="user-avatar"/></td>
-                    <td colspan=3><div class="user-name">Dr. Pepper</div></td>
-                </tr>
-                <tr>
-                    <td><a href={%url 'settings'%} class="user-block-ref">Settings</a></td>
-                    <td><a href="#" class="user-block-ref">Log out</a></td>
-                </tr>
-            </table>
+<link href="{% static "css/user_info.css" %}" rel="stylesheet">
+    <span class="user-block">
+        <table class="logged-user">
+            <tr>
+                <td rowspan=2><img src={% static "/img/user_avatar.png" alt="user-avatar" %} class="user-avatar"/></td>
+                <td colspan=3><div class="user-name">Dr. Pepper</div></td>
+            </tr>
+            <tr>
+                <td><a href={%url 'settings'%} class="user-block-ref">Settings</a></td>
+                <td><a href="#" class="user-block-ref">Log out</a></td>
+            </tr>
+        </table>
 
-            <table class="unlogged-user">
-                <tr>
-                    <td><a href={%url 'login'%} class="user-block-ref">Log in</a></td>
-                    <td><a href={%url 'signup'%} class="user-block-ref">Register</a></td>
-                </tr>
-            </table>
-        </span>
+        <table class="unlogged-user">
+            <tr>
+                <td><a href={%url 'login'%} class="user-block-ref">Log in</a></td>
+                <td><a href={%url 'signup'%} class="user-block-ref">Register</a></td>
+            </tr>
+        </table>
+    </span>
