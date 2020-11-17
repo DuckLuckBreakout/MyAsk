@@ -1,0 +1,25 @@
+{% load static %}
+    <link href="{% static "css/answer.css" %}" rel="stylesheet">
+    <div class="answer-block block-body">
+        <div class="row">
+            <div class="col-2">
+                <div class="user-avatar">
+                    <img src={% static "/img/user_avatar.png" %}/ class="avatar-img">
+                </div>
+                <div class="like-counter">
+                        <a class="btn btn-outline-success" href="" role="button">+</a>
+                    <span>
+                        {{ answer.rating.rating }}
+                    </span>
+                        <a class="btn btn-outline-danger" href="" role="button">-</a>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="answer-text">
+                    {{ answer.text }}
+                </div>
+                <div class="answer-footer">
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,33 @@
+.login-form {
+    margin-top: 20px;
+    background-color: #ebecf0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    max-width: 45em;
+    position: relative;
+    white-space: normal;
+    padding: 10px;
+}
+
+.form-control {
+    padding: 15px;
+}
+
+.submit-login {
+    margin-left: 7.7em;
+    max-width: 10em;
+}
+
+.create-new-account {
+    margin-top: 1em;
+    margin-left: 7.7em;
+    max-width: 10em;
+
+}
+
+input {
+    max-width: 30em;
+}

@@ -1,0 +1,59 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+
+{% block title %}
+	Answers
+{% endblock title %}
+
+{% block content %}
+    <link href="{% static "css/question.css" %}" rel="stylesheet">
+<div class="question-answers">
+	<div class="author-block block-body">
+		<div class="row">
+			<div class="col-3">
+				<div id="author-avatar" class="user-avatar">
+					<img src={% static "/img/user_avatar.png" %}/ class="avatar-img">
+				</div>
+				<div class="like-counter">
+                	<a class="btn btn-outline-success" href="" role="button">+</a>
+					<span>
+                    	{{ question.rating.rating }}
+                	</span>
+                	<a class="btn btn-outline-danger" href="" role="button">-</a>
+				</div>
+			</div>
+			<div class="col-9">
+				<div class="question-title">
+					<h3>
+						{{ question.title }}
+					</h3>
+				</div>
+				<div class="question-text">
+					{{ question.text }}
+				</div>
+				<div class="question-footer">
+					<form class="form-inline">
+						Tags:
+						{% for tag in question.tags.all %}
+							<a class="tag" href={% url 'tag' tag.name %}>  {{tag}}</a>
+						{% endfor %}
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="answers-list">
+		{% for answer in answers %}
+			{% include "inc/answer.html"%}
+		{% endfor %}
+		<div class="answers-footer">
+			{% include 'inc/paginator.html' with page=answers %}
+		</div>
+	</div>
+	<div class="input-answer">
+		<textarea name="answer" class="form-control" rows="6" placeholder="Enter your answer here"></textarea>
+	</div>
+	<a class="btn btn-primary" href="" role="button">Answer</a>
+</div>
+{% endblock content %}

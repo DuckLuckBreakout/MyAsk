@@ -1,0 +1,16 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+
+<!-- Список вопросов-->
+{% block content %}
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+    <form class="form-inline">
+        <h2>
+            Settings: {{ user.nickName }}
+        </h2>
+    </form>
+    <div class="settings-block">
+        {% include 'inc/settings_form.html' %}
+    </div>
+{% endblock content %}

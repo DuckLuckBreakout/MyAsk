@@ -1,0 +1,15 @@
+{% load static %}
+
+<link href="{% static "css/navbar.css" %}" rel="stylesheet">
+<nav class="navbar-block navbar-expand-lg ">
+    <div class="container">
+        <div class="collapse navbar-collapse">
+            <a class="logo navbar-brand" href={%url 'index'%}>AskKovalenko</a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2 search-line" type="search" placeholder="&#128269;    Search" aria-label="Search">
+                <a class="btn btn-outline-success" href={%url 'ask'%} role="button">ASK!</a>
+            </form>
+            {% include 'inc/user_info.html' %}
+        </div>
+    </div>
+</nav>

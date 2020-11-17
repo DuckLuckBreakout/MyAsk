@@ -1,0 +1,27 @@
+{% load static %}
+
+<link href="{% static "css/right_block.css" %}" rel="stylesheet">
+
+<div class="popular-tags-block block-body">
+	<h4 class="block-name">
+		Popular tags
+	</h4>
+    <div class="popular-tags-list">
+          <form class="form-inline">
+              	{% for tag in tags %}
+                    <a href={% url 'tag' tag.name %} class="popular-tag">{{ tag }}</a>
+                {% endfor %}
+          </form>
+    </div>
+</div>
+
+<div class="best-members-block block-body">
+	<h4 class="block-name">
+		Best members
+	</h4>
+    <div class="best-members-list">
+        {% for member in members %}
+            <a href="" class="best-member-link">{{ member }}</a>
+        {% endfor %}
+    </div>
+</div>
