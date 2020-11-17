@@ -1,0 +1,21 @@
+body {
+    /*background-image: url("https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2398x1600/349b7fdd377e037a280303922ba62cb0/photo-1554388828-bb50f4238786.jpg");*/
+    /*background-image: url("https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2400x1600/c1cd0bdab2abae77b88a2fceacc53fcc/photo-1559726950-9bae0f643f86.jpg");*/
+    /*background-image: url("https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2091x1600/7cb209e4d725619ddfd78f848874a299/photo-1605041176777-23275b7a1410.jpg");*/
+    background: linear-gradient(to top, #80839f, #465374) no-repeat;
+    background-size: 400em 400em;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust:100%
+}
+
+body, button, html, input, select, textarea {
+    color: #172b4d;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}

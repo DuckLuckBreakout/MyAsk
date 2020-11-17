@@ -1,0 +1,31 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+
+<!-- Список вопросов-->
+{% block content %}
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+    <form class="form-inline">
+
+        <a href="" class="new-questions-link">
+            <h2>
+                New Questions
+            </h2>
+        </a>
+        <a href="" class="hot-questions-link">
+            <h2>
+                Hot Questions
+            </h2>
+        </a>
+    </form>
+    <div class="questions-list">
+        {% for question in questions %}
+            {% include 'inc/one_question.html' %}
+        {% endfor %}
+        <div class="questions-footer">
+            {% include 'inc/paginator.html' with page=questions %}
+        </div>
+    </div>
+
+
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+    <form class="form-inline">
+        <h2>
+            New question
+        </h2>
+    </form>
+    {% include 'inc/ask_form.html' %}
+{% endblock content %}
+
+

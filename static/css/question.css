@@ -1,0 +1,84 @@
+.author-block {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: #ebecf0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    position: relative;
+    white-space: normal;
+}
+
+
+.author-block .user-avatar,
+.author-block .like-counter {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.author-block .avatar-img {
+    height: 110px;
+    width: 110px;
+}
+
+.author-block .like-counter > span {
+    display: inline-block;
+    padding: 4px 6px;
+}
+
+.author-block .like-button {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    transform: scale(1, -1);
+}
+
+.author-block .question-footer {
+    position: sticky;
+    margin-top: 5em;
+}
+
+.question-answers {
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 3px;
+    cursor: default;
+    float: left;
+    line-height: 32px;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    overflow: hidden;
+    position: relative;
+    background-color: hsla(0,0%,100%,.24);
+    text-decoration: none;
+    text-overflow: ellipsis;
+    min-width: 60em;
+    max-width: 60em;
+}
+
+.tag {
+    margin-left: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(9,30,66,.25);
+    display: block;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+    max-height: 3em;
+    max-width: 15em;
+}
+
+textarea {
+    margin-bottom: 1em;
+}
+
+.btn-primary {
+    background-color: #1c7430;
+    margin-bottom: 1em;
+}

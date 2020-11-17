@@ -1,0 +1,45 @@
+{% load static %}
+<link href="{% static "css/one_question.css" %}" rel="stylesheet">
+<div class="question-block block-body">
+    <div class="row">
+        <div class="col-2">
+            <div class="user-avatar">
+                <img src={% static "/img/user_avatar.png" %}/ class="avatar-img">
+            </div>
+            <div class="like-counter">
+                <a class="btn btn-outline-success" href="" role="button">+</a>
+                <span>
+                    {{ question.rating.rating }}
+                </span>
+                <a class="btn btn-outline-danger" href="" role="button">-</a>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="question-title">
+                <h4>
+                    <a href={% url 'question' question.id %}
+                    <a>
+                        {{ question.title }}
+                    </a>
+                </h4>
+            </div>
+            <div class="question-text">
+                {{ question.text }}
+            </div>
+            <div class="question-footer">
+                <form class="form-inline">
+                    <a href={% url 'question' question.id %}>
+                        Answers
+                        <span class="answer-count">
+                            ({{ question.answer_set.all|length }})
+                        </span>
+                    </a>
+                    Tags:
+                    {% for tag in question.tags.all %}
+                        <a class="tag" href={% url 'tag' tag.name %}>  {{tag}}</a>
+                    {% endfor %}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+
+<!-- Список вопросов-->
+{% block content %}
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+    <form class="form-inline">
+        <h2>
+            Tag: {{ tag }}
+        </h2>
+    </form>
+    <div class="questions-list">
+        {% for question in questions %}
+            {% include 'inc/one_question.html' %}
+        {% endfor %}
+        <div class="questions-footer">
+            {% include 'inc/paginator.html' with page=questions %}
+        </div>
+    </div>
+{% endblock content %}
