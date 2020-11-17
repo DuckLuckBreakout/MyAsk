@@ -17,8 +17,8 @@ def index(request):
     })
 
 
-def hot_questions(request):
-    return render(request, 'index.html', {
+def hot(request):
+    return render(request, 'hot.html', {
         'questions': paginate(Question.objects.hot_questions(), request, 20),
         'tags': Tag.objects.get_top_tags(),
         'members': Profile.objects.best_members(),
